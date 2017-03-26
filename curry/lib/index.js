@@ -1,63 +1,63 @@
-const _checkInput = function (i) {
+const checkInput = function (i) {
   if (typeof i !== 'number') {
     throw new Error('Your input must be a number!');
   }
 };
 
 const isGreater = (firstNumber) => {
-  _checkInput(firstNumber);
+  checkInput(firstNumber);
 
   return (secondNumber) => {
-    _checkInput(secondNumber);
+    checkInput(secondNumber);
 
-    return firstNumber > secondNumber;
-  }
+    return secondNumber > firstNumber;
+  };
 };
 
 const isLower = (firstNumber) => {
-  _checkInput(firstNumber);
+  checkInput(firstNumber);
 
   return (secondNumber) => {
-    _checkInput(secondNumber);
+    checkInput(secondNumber);
 
-    return firstNumber < secondNumber;
-  }
+    return secondNumber < firstNumber;
+  };
 };
 
 const isEqual = (firstNumber) => {
-  _checkInput(firstNumber);
+  checkInput(firstNumber);
 
   return (secondNumber) => {
-    _checkInput(secondNumber);
+    checkInput(secondNumber);
 
-    return firstNumber === secondNumber;
-  }
+    return secondNumber === firstNumber;
+  };
 };
 
 const isGreaterOrEqual = (firstNumber) => {
-  _checkInput(firstNumber);
+  checkInput(firstNumber);
 
   return (secondNumber) => {
-    _checkInput(secondNumber);
+    checkInput(secondNumber);
 
-    return firstNumber >= secondNumber;
-  }
+    return secondNumber >= firstNumber;
+  };
 };
 
 const isLowerOrEqual = (firstNumber) => {
-  _checkInput(firstNumber);
+  checkInput(firstNumber);
 
   return (secondNumber) => {
-    _checkInput(secondNumber);
+    checkInput(secondNumber);
 
-    return firstNumber <= secondNumber;
-  }
+    return secondNumber <= firstNumber;
+  };
 };
 
-export default {
+export {
   isGreater,
   isLower,
   isEqual,
   isGreaterOrEqual,
-  isLowerOrEqual
+  isLowerOrEqual,
 };
