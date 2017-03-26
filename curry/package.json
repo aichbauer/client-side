@@ -1,0 +1,55 @@
+{
+  "name": "curry",
+  "version": "1.0.0",
+  "description": "A fun package with chainable higher order functions",
+  "author": "Lukas Aichbauer <rudolfson.junior@gmail.com>",
+  "contributors": [
+    "Jan Peer Stöcklmair <janpeer264@gmail.com> (https://jpeer.at)"
+  ],
+  "bugs": {
+    "url": "https://github.com/rudolfsonjunior/client-side/issues"
+  },
+  "homepage": "https://github.com/rudolfsonjunior/client-side#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudolfsonjunior/client-side.git"
+  },
+  "license": "ISC",
+  "main": "dest/index.js",
+  "scripts": {
+    "start": "npm run babel",
+    "fix": "eslint lib test --fix",
+    "prepush": "npm test",
+    "pretest": "npm run lint",
+    "test": "nyc ava",
+    "lint": "eslint lib test",
+    "babel": "babel lib -d dest",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": "inherit"
+  },
+  "nyc": {
+    "exclude": [
+      "test"
+    ]
+  },
+  "keywords": [
+  ],
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-cli": "^6.24.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.2.2",
+    "coveralls": "^2.12.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "husky": "^0.13.2",
+    "nyc": "^10.1.2"
+  }
+}
