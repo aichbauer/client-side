@@ -4,7 +4,7 @@ import {
   isGreaterOrEqual,
   isLower,
   isLowerOrEqual,
-  isEqual
+  isEqual,
 } from '../lib';
 
 const notValidNumber = 'Hello';
